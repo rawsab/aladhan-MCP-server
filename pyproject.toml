@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "aladhan-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "Model Context Protocol server for Aladhan prayer times API"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -45,9 +45,9 @@ dev = [
 aladhan-mcp = "aladhan_mcp.server:main"
 
 [project.urls]
-Homepage = "https://github.com/yourusername/aladhan-mcp"
-Repository = "https://github.com/yourusername/aladhan-mcp"
-Issues = "https://github.com/yourusername/aladhan-mcp/issues"
+Homepage = "https://github.com/rawsab/aladhan-MCP-server"
+Repository = "https://github.com/rawsab/aladhan-MCP-server"
+Issues = "https://github.com/rawsab/aladhan-MCP-server/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["aladhan_mcp"]
