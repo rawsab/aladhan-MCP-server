@@ -3,12 +3,14 @@
 A Model Context Protocol (MCP) server that provides comprehensive tools for accessing Islamic prayer times and calendar data through the Aladhan API. Built with FastMCP for modern MCP compatibility and type safety.
 
 <div align="center">
-  
+
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
-[![pip](https://img.shields.io/badge/pip-latest-blue.svg?logo=pypi&logoColor=white)](https://pip.pypa.io/en/stable/)
+[![PyPI](https://img.shields.io/pypi/v/aladhan-mcp.svg?logo=pypi&logoColor=white)](https://pypi.org/project/aladhan-mcp/)
 [![FastMCP](https://img.shields.io/badge/FastMCP-2.0-purple.svg)](https://github.com/jlowin/fastmcp)
 [![Aladhan API](https://img.shields.io/badge/Aladhan-6.1.0-yellow.svg)](https://aladhan.com/prayer-times-api)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+[Installation](#installation) • [Quick Start](#quick-start) • [Features](#features) • [Documentation](#available-tools)
 
 </div>
 
@@ -56,6 +58,11 @@ A Model Context Protocol (MCP) server that provides comprehensive tools for acce
 
 ## Quick Start
 
+```bash
+pip install aladhan-mcp
+python -m aladhan_mcp.server
+```
+
 ### Prerequisites
 
 - Python 3.8 or higher
@@ -63,19 +70,17 @@ A Model Context Protocol (MCP) server that provides comprehensive tools for acce
 
 ### Installation
 
+You can install directly from PyPI:
+
 ```bash
-# Clone the repository
+pip install aladhan-mcp
+```
+
+Or, if you want the latest development version:
+
+```bash
 git clone https://github.com/rawsab/aladhan-MCP-server.git
 cd aladhan-mcp
-
-# Create virtual environment
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-
-# Install the package
-pip install -e .
-
-# Or install with development dependencies
 pip install -e ".[dev]"
 ```
 
@@ -289,9 +294,17 @@ get_hijri_calendar_by_city(
 
 ### Setup Development Environment
 
+You can install development dependencies directly from PyPI:
+
+```bash
+pip install "aladhan-mcp[dev]"
+```
+
+Or clone the repository if you want to work on the source:
+
 ```bash
 # Clone the repository
-git clone git clone https://github.com/rawsab/aladhan-MCP-server.git
+git clone https://github.com/rawsab/aladhan-MCP-server.git
 cd aladhan-mcp
 
 # Create virtual environment
