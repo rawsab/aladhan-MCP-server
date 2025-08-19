@@ -1,8 +1,8 @@
 # Aladhan MCP Server
 
-A Model Context Protocol (MCP) server that provides comprehensive tools for accessing Islamic prayer times and calendar data through the Aladhan API. Built with FastMCP for modern MCP compatibility and type safety.
-
 <div align="center">
+
+**A Model Context Protocol (MCP) server that provides comprehensive tools for accessing Islamic prayer times and calendar data through the Aladhan API. Built with FastMCP for modern MCP compatibility and type safety.**
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![PyPI](https://img.shields.io/pypi/v/aladhan-mcp.svg?logo=pypi&logoColor=white)](https://pypi.org/project/aladhan-mcp/)
