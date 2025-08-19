@@ -431,3 +431,13 @@ If you encounter any issues or have questions, please:
 - **Transport errors**: Ensure you're using the correct MCP client configuration
 - **Tool registration errors**: Verify all dependencies are installed correctly
 - **API errors**: Check your internet connection and the Aladhan API status
+
+---
+
+<div align="center">
+
+**Made with ❤️ by [Rawsab Said](https://github.com/rawsabsaid)**
+
+[GitHub](https://github.com/rawsab/aladhan-MCP-server) • [PyPI](https://pypi.org/project/aladhan-mcp/) • [Issues](https://github.com/rawsab/aladhan-mcp/issues)
+
+</div>
