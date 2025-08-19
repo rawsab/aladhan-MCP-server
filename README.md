@@ -4,35 +4,36 @@ A Model Context Protocol (MCP) server that provides comprehensive tools for acce
 
 ## Table of Contents
 
-- [Features](#features)
-- [Quick Start](#quick-start)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Quick Test](#quick-test)
-- [Usage](#usage)
-  - [As an MCP Server](#as-an-mcp-server)
-  - [Direct Usage](#direct-usage)
-  - [Testing](#testing)
-- [Available Tools](#available-tools)
-  - [Date Conversion Tools](#date-conversion-tools)
-  - [Prayer Time Tools](#prayer-time-tools)
-  - [Qibla Tool](#qibla-tool)
-  - [Calendar Tools](#calendar-tools)
-- [Configuration Options](#configuration-options)
-- [Examples](#examples)
-- [Development](#development)
-- [API Reference](#api-reference)
-- [Contributing](#contributing)
-  - [Development Guidelines](#development-guidelines)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
-- [Current Status](#current-status)
-  - [Working Features](#working-features)
-  - [In Progress](#in-progress)
-  - [Roadmap](#roadmap)
-- [Support](#support)
+  - [Features](#features)
+  - [Quick Start](#quick-start)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Quick Test](#quick-test)
+  - [Usage](#usage)
+    - [As an MCP Server](#as-an-mcp-server)
+    - [Direct Usage](#direct-usage)
+    - [Testing](#testing)
+  - [Available Tools](#available-tools)
+    - [Date Conversion Tools](#date-conversion-tools)
+    - [Prayer Time Tools](#prayer-time-tools)
+    - [Qibla Tool](#qibla-tool)
+    - [Calendar Tools](#calendar-tools)
+  - [Configuration Options](#configuration-options)
+  - [Examples](#examples)
+  - [Development](#development)
+    - [Setup Development Environment](#setup-development-environment)
+    - [Running Tests](#running-tests)
+    - [Code Quality](#code-quality)
+    - [Project Commands](#project-commands)
+  - [API Reference](#api-reference)
+  - [Contributing](#contributing)
+    - [Development Guidelines](#development-guidelines)
+  - [License](#license)
+  - [Acknowledgments](#acknowledgments)
+  - [Current Status](#current-status)
+  - [Support](#support)
 
-## ✨ Features
+## Features
 
 - **Prayer Times**: Get daily prayer times by coordinates or city with multiple calculation methods
 - **Qibla Direction**: Calculate qibla direction (bearing) from any coordinates
@@ -43,7 +44,7 @@ A Model Context Protocol (MCP) server that provides comprehensive tools for acce
 - **Modern Architecture**: FastMCP with type annotations for robust tool schemas
 - **Easy Integration**: Simple setup and configuration for MCP clients
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -78,7 +79,7 @@ python -c "from aladhan_mcp.server import register_all_tools; register_all_tools
 pytest -v
 ```
 
-## 📖 Usage
+## Usage
 
 ### As an MCP Server
 
@@ -104,7 +105,7 @@ The server can be used with any MCP client. Configure your MCP client to use:
 python -m aladhan_mcp.server
 
 # Test that tools register correctly
-python -c "from aladhan_mcp.server import register_all_tools; register_all_tools(); print('✅ All tools registered!')"
+python -c "from aladhan_mcp.server import register_all_tools; register_all_tools(); print('All tools registered!')"
 ```
 
 ### Testing
@@ -117,28 +118,28 @@ pytest
 pytest -v
 ```
 
-## 🛠️ Available Tools
+## Available Tools
 
-### 📅 Date Conversion Tools
-- **`list_calculation_methods`** - List all available prayer calculation methods
+### Date Conversion Tools
+- **`list_calculation_methods`** - List all  prayer calculation methods
 - **`convert_gregorian_to_hijri`** - Convert Gregorian date to Hijri (YYYY-MM-DD format)
 - **`convert_hijri_to_gregorian`** - Convert Hijri date to Gregorian (DD-MM-YYYY format)
 
-### 🕌 Prayer Time Tools
+### Prayer Time Tools
 - **`get_prayer_times`** - Get daily prayer times by coordinates
 - **`get_prayer_times_by_city`** - Get daily prayer times by city/country
 - **`get_next_prayer`** - Get the next prayer time for given coordinates
 
-### 🧭 Qibla Tool
+### Qibla Tool
 - **`get_qibla`** - Get Qibla direction (bearing in degrees) from coordinates
 
-### 📊 Calendar Tools
+### Calendar Tools
 - **`get_hijri_calendar_by_city`** - Get Hijri month prayer times by city
 - **`get_hijri_calendar`** - Get Hijri month prayer times by coordinates
 - **`get_monthly_calendar`** - Get Gregorian month prayer times by coordinates
 - **`get_monthly_calendar_by_city`** - Get Gregorian month prayer times by city
 
-## ⚙️ Configuration Options
+## Configuration Options
 
 ### Prayer Calculation Methods
 
@@ -176,9 +177,9 @@ The server supports 24+ prayer calculation methods worldwide:
 - **2**: One seventh of the night  
 - **3**: Angle-based method
 
-## 💡 Examples
+## Examples
 
-### 🕌 Prayer Times
+### Prayer Times
 
 ```python
 # Get prayer times for London
@@ -207,7 +208,7 @@ get_next_prayer(
 )
 ```
 
-### 🧭 Qibla Direction
+### Qibla Direction
 
 ```python
 # Get qibla direction from New York
@@ -217,7 +218,7 @@ get_qibla(
 )
 ```
 
-### 📅 Date Conversion
+### Date Conversion
 
 ```python
 # Convert Gregorian to Hijri
@@ -230,7 +231,7 @@ convert_hijri_to_gregorian(date="15-07-1446")
 list_calculation_methods()
 ```
 
-### 📊 Calendar Data
+### Calendar Data
 
 ```python
 # Get Gregorian month calendar by coordinates
@@ -274,7 +275,7 @@ get_hijri_calendar_by_city(
 )
 ```
 
-## 🔧 Development
+## Development
 
 ### Setup Development Environment
 
@@ -333,7 +334,7 @@ python -c "from aladhan_mcp.server import register_all_tools; register_all_tools
 python -m aladhan_mcp.server
 ```
 
-## 📚 API Reference
+## API Reference
 
 The server uses the [Aladhan API](https://aladhan.com/prayer-times-api) for all prayer time calculations. All tools return structured JSON responses with comprehensive prayer time data.
 
@@ -357,7 +358,7 @@ All tools return JSON-formatted strings containing:
 - **Error responses**: Error messages with details about what went wrong
 - **Validation errors**: Clear messages about invalid parameters
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please follow these steps:
 
@@ -374,19 +375,19 @@ We welcome contributions! Please follow these steps:
 - Update documentation for new features
 - Ensure all tests pass before submitting
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Aladhan API](https://aladhan.com/) for providing the prayer times data
 - [Model Context Protocol](https://modelcontextprotocol.io/) for the MCP framework
 - [FastMCP](https://github.com/jlowin/fastmcp) for the modern MCP server framework
 
-## 📊 Current Status
+## Current Status
 
-### ✅ Working Features
+### Working Features
 - **Date Conversion Tools**: All 3 date conversion tools fully functional
 - **Prayer Time Tools**: All 3 prayer time tools work with coordinates and cities
 - **Qibla Tool**: Qibla direction calculation working perfectly
@@ -396,21 +397,21 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Testing**: Comprehensive test suite with passing tests
 - **Documentation**: Complete API reference and usage examples
 
-### 🔄 In Progress
+### In Progress
 - **Enhanced Testing**: Adding more comprehensive integration tests
 - **Performance Optimization**: Caching improvements and response optimization
 
-### 📋 Roadmap
+### Roadmap
 - Additional prayer calculation methods
 - Enhanced error handling and validation
 - Performance optimizations
 - Extended calendar functionality
 
-## 🚧 Support
+## Support
 
 If you encounter any issues or have questions, please:
 
-1. Check the [Issues](https://github.com/yourusername/aladhan-mcp/issues) page
+1. Check the [Issues](https://github.com/rawsab/aladhan-mcp/issues) page
 2. Create a new issue with detailed information
 3. Include your Python version, operating system, and any error messages
 4. Provide example code that reproduces the issue
